@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="description" content="Will Cast — engineering portfolio featuring hardware development, control systems, and mechanical design.">
+  <title>Will Cast — Engineering & Design</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23202426'/%3E%3Ctext x='15' y='44' font-family='Arial' font-weight='bold' font-size='38' fill='white'%3EW%3C/text%3E%3Ccircle cx='50' cy='43' r='4' fill='%23de704e'/%3E%3C/svg%3E">
+  <style>
+    :root{--paper:#f7f7f5;--ink:#202426;--muted:#62686a;--line:#dfe2df;--accent:#cb785b;--shell:1256px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:4px}
+    h1,h2,h3,p{margin-top:0}.shell{width:min(calc(100% - 96px),var(--shell));margin-inline:auto}
+    .skip{position:fixed;top:-100px;left:16px;background:#202426;color:white;padding:12px;z-index:99}.skip:focus{top:12px}
+    .header{position:sticky;top:0;z-index:30;background:#f7f7f5dc;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid #31353512}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;gap:13px;align-items:center;white-space:nowrap;font-size:12px;font-weight:750;letter-spacing:.16em}
+    .mark{display:grid;place-items:center;background:#202426;color:#fff;border-radius:10px;width:36px;height:36px;font-size:18px;font-weight:750;letter-spacing:-.08em}
+    .mark span{color:#e7a08a}.links{display:flex;gap:clamp(20px,3vw,48px);margin-left:auto}.links a{font-size:12px;font-weight:600;color:#606568}
+    .links a:hover,.nav-cta:hover{color:var(--accent)}.nav-cta{white-space:nowrap;font-size:12px;font-weight:650;margin-left:20px;border:1px solid #cbd0cd;border-radius:50px;padding:13px 18px;transition:color .2s}
+    .nav-cta span{margin-left:18px;font-size:16px}
+    .eyebrow{font-size:10px;letter-spacing:.20em;color:#7c8283;font-weight:760;line-height:1.5;text-transform:uppercase}
+    .hero{padding-top:55px;padding-bottom:112px}.hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;gap:12px}
+    .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#bb907c;margin-right:9px;vertical-align:1px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.10fr);gap:clamp(58px,8.8vw,140px);align-items:start}
+    .portrait-frame{margin:0;position:relative;overflow:hidden;aspect-ratio:.765;border-radius:7px;background:#bac6bd;isolation:isolate}
+    .portrait-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 26%;z-index:1}
+    .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 68% 20%,#cad3ca 0,transparent 50%),linear-gradient(140deg,#dce0d9,#aab9b1 62%,#8a9992)}
+    .orbit{position:absolute;width:116%;aspect-ratio:1;border:1px solid #ffffff65;border-radius:50%;transform:rotate(-25deg) scaleY(.7)}
+    .orbit.one{left:6%;top:-19%}.orbit.two{left:-33%;top:23%;border-color:#ffffff44}
+    .initials{color:#ffffffe0;font-size:clamp(95px,13vw,170px);font-weight:630;letter-spacing:-.12em;transform:translateY(-7%);padding-right:.13em}
+    .initials span{color:#fff}.placeholder-note{position:absolute;bottom:85px;left:0;right:0;text-align:center;color:#31443b9c;letter-spacing:.25em;font-size:10px;font-weight:750}
+    .portrait-caption{position:absolute;left:28px;right:28px;bottom:25px;z-index:2;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.21em;font-weight:740;color:white;text-shadow:0 1px 9px #0005}
+    .portrait-caption span:last-child{font-size:26px;font-weight:300}.photo-foot{display:flex;justify-content:space-between;margin-top:18px;color:#898f90;letter-spacing:.16em;font-size:10px;font-weight:700}
+    .hero-content{padding-top:10px}.hello{color:var(--accent)}h1{font-size:clamp(70px,7.35vw,115px);line-height:1;letter-spacing:-.082em;white-space:nowrap;font-weight:670;margin:18px 0 23px -6px}
+    .accent{color:var(--accent)}.role{font-size:clamp(19px,2vw,25px);font-weight:550;letter-spacing:-.035em;margin-bottom:16px}
+    .intro{max-width:485px;font-size:clamp(15px,1.25vw,17px);line-height:1.75;color:var(--muted);margin-bottom:42px}
+    .info{border-top:1px solid #d8dcd9;padding-top:20px;margin-bottom:34px;scroll-margin-top:106px}
+    .info-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:18px}.info-heading span{font-size:10px;letter-spacing:.12em;color:var(--accent);font-weight:800}
+    .info-heading h2{font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;margin:0}
+    .info-content{display:flex;justify-content:space-between;gap:12px}.info-content h3{font-size:20px;line-height:1.35;letter-spacing:-.032em;font-weight:625;margin:0 0 8px}
+    .lighter{color:#9a9ea0;font-weight:450}.info-content p{font-size:14px;line-height:1.65;color:#686d6f;margin:0}.info-content .detail{color:#92999a;font-size:13px}
+    .arrow{color:#9fa3a3;font-size:19px}.text-link{display:inline-flex;gap:17px;align-items:center;font-weight:700;font-size:14px;border-bottom:1px solid #202426;padding-bottom:7px;transition:gap .2s,color .2s}
+    .text-link:hover{gap:26px;color:var(--accent)}.text-link span{font-size:19px;font-weight:400}
+    .work{padding:110px 0 105px;background:#edeeeb;overflow:hidden}.work-head{display:flex;align-items:end;justify-content:space-between;gap:44px;margin-bottom:48px}
+    .work-head h2{font-size:clamp(52px,6.2vw,91px);letter-spacing:-.073em;line-height:1.05;font-weight:690;margin:14px 0 0 -4px}
+    .work-head h2 span{font-weight:365;color:#888f90}.work-head p{max-width:338px;line-height:1.8;font-size:15px;color:#71787b;margin:0 0 7px}
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:28px}.project{background:#f8f8f6;border:1px solid #e1e4e1;border-radius:7px;overflow:hidden;min-width:0;transition:transform .45s,box-shadow .45s}
+    .project:hover{transform:translateY(-6px);box-shadow:0 28px 45px -36px #27362f70}.project.featured{grid-column:1/-1;display:grid;grid-template-columns:1.17fr 1fr}
+    .art{position:relative;overflow:hidden;min-height:300px}.featured .art{min-height:390px}.art-index{position:absolute;left:27px;top:25px;font-size:10px;font-weight:750;letter-spacing:.16em;z-index:4}
+    .circuit{background:radial-gradient(ellipse at 80% 15%,#e0e4de,transparent 52%),linear-gradient(125deg,#cfdad2,#b4c7be);color:#557666}
+    .ring{position:absolute;aspect-ratio:1;border:1px solid #42634f30;border-radius:50%;width:590px;left:-120px;top:-210px}
+    .ring.two{left:36px;top:-65px;width:660px}
+    .board{position:absolute;left:50%;top:51%;width:61%;aspect-ratio:1.5;transform:translate(-50%,-50%) rotate(-12deg);border:2px solid #45665075;border-radius:14px;background:repeating-linear-gradient(90deg,#ffffff20 0 1px,transparent 1px 19px),linear-gradient(130deg,#8cac9c,#6f9582);box-shadow:16px 22px 45px #27463745,inset 0 0 0 12px #d0e6d025}
+    .board:after{content:"";position:absolute;inset:18px;border:1px solid #e0f7e455;border-radius:4px}
+    .chip{position:absolute;left:38%;top:25%;width:32%;aspect-ratio:1;background:#416556;border:8px solid #557869;box-shadow:0 0 0 4px #d0e6d299,5px 9px 16px #13302033;display:grid;place-items:center;color:#b9d4c1;font-size:clamp(16px,3vw,32px);font-weight:750;letter-spacing:.12em}
+    .chip.small{left:13%;top:32%;width:12%;border-width:5px}
+    .trace{position:absolute;background:#cfe4d1;height:3px;opacity:.8}.trace.a{left:0;top:25%;width:43%}.trace.b{right:0;top:48%;width:32%}.trace.c{left:24%;top:55%;width:15%}.trace.d{left:41%;top:82%;width:40%}
+    .lunar{background:linear-gradient(155deg,#e9dcd1,#cdbdb0 68%,#c9b09e);color:#665b51}
+    .sun{position:absolute;top:48px;right:72px;width:145px;aspect-ratio:1;border-radius:50%;background:#fbefdab8;box-shadow:0 0 85px 50px #f8ecdb66}
+    .horizon{position:absolute;bottom:-95px;left:-35%;width:180%;height:230px;background:linear-gradient(160deg,#b8a496,#968b82);border-radius:50% 50% 0 0;transform:rotate(-7deg)}
+    .track{position:absolute;z-index:2;bottom:-25px;height:210px;width:75px;display:flex;flex-direction:column;gap:7px;transform:perspective(340px) rotateX(48deg) rotateZ(-15deg)}
+    .track.left{left:34%}.track.right{left:57%}.tile{flex:1;border:2px solid #59534f70;border-radius:3px;background:repeating-linear-gradient(120deg,#c2b2a3 0 5px,#b4a597 5px 10px);box-shadow:2px 4px 6px #3a342c22}
+    .stars{background:linear-gradient(145deg,#343a53,#1b243a);color:#e1e3fa}
+    .starfield{position:absolute;inset:0;background-image:radial-gradient(circle,#fff 1px,transparent 1.5px),radial-gradient(circle,#d7dafa .8px,transparent 1.2px),radial-gradient(circle,#f4f5e6 .7px,transparent 1px);background-size:89px 73px,124px 127px,55px 61px;background-position:16px 28px,56px 13px,2px 12px;opacity:.54}
+    .beam{position:absolute;left:23%;bottom:14%;width:65%;height:75%;background:linear-gradient(0deg,#97a8e34d,transparent 74%);clip-path:polygon(0 100%,22% 100%,100% 0,100% 79%)}
+    .projector{position:absolute;z-index:2;width:129px;height:62px;left:22%;bottom:17%;border-radius:12px 18px 14px 10px;background:linear-gradient(130deg,#8792a6,#414d67);transform:skewY(-9deg);box-shadow:9px 20px 32px #11192e}
+    .lens{position:absolute;right:7px;top:10px;width:42px;height:42px;border:7px solid #bac4d8;border-radius:50%;background:#e3f1ff;box-shadow:0 0 37px #a9c0ffee}
+    .spark{position:absolute;color:#d4daff;z-index:3}.spark.one{top:65px;right:27%;font-size:34px}.spark.two{top:136px;right:16%;font-size:25px}
+    .project-body{padding:30px 34px 34px}.featured .project-body{display:flex;flex-direction:column;justify-content:center;padding:44px 56px}
+    .kicker{display:flex;flex-wrap:wrap;gap:12px;font-size:10px;letter-spacing:.12em;font-weight:780;color:#a26956;margin-bottom:28px}.kicker span+span{color:#939997}.kicker span+span:before{content:"/";margin-right:12px;color:#c2c7c3}
+    .project-body h3{font-size:clamp(26px,3vw,38px);line-height:1.15;max-width:425px;font-weight:660;letter-spacing:-.052em;margin:0 0 15px}
+    .project-body p{font-size:15px;line-height:1.7;color:#717778;max-width:410px;margin:0 0 27px}.tag{display:inline-flex;width:fit-content;border:1px solid #d4d8d5;color:#5c6463;font-size:11px;font-weight:650;padding:9px 13px;border-radius:99px}
+    .outro{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:75px;color:#858b8b}.outro span{font-size:30px;color:#b88770}.outro p{max-width:550px;font-size:15px;line-height:1.6;margin:0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:155px;border-bottom:1px solid #dde1de}
+    .footer-inner>div{display:flex;align-items:center;gap:23px}.footer-mark{font-size:37px;font-weight:740;letter-spacing:-.09em}.footer-text{color:#89908e;font-size:13px}.footer-inner a{font-size:13px;font-weight:700}
+    .footer-base{display:flex;justify-content:space-between;padding:29px 0 32px;color:#9a9f9e;font-size:10px;letter-spacing:.14em;font-weight:700}
+    @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}.fade{animation:rise .9s cubic-bezier(.2,.65,.2,1) both}.fade.delay1{animation-delay:.12s}.fade.delay2{animation-delay:.23s}
+    .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .85s,transform .85s}.js .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:1050px){.shell{width:min(calc(100% - 68px),var(--shell))}.hero-grid{gap:55px}h1{font-size:clamp(60px,7.8vw,84px)}.featured .project-body{padding:30px 38px}.links{gap:22px}.nav-cta{margin-left:0}}
+    @media(max-width:730px){html{scroll-padding-top:76px}.shell{width:min(calc(100% - 40px),var(--shell))}.nav{height:70px}.links a:not(:first-child),.nav-cta{display:none}.brand{font-size:11px}.links a{font-size:11px}.hero{padding:34px 0 78px}.hero-top{margin-bottom:22px}.hero-top .right{display:none}.hero-grid{grid-template-columns:1fr;gap:40px}.portrait-frame{aspect-ratio:.9}.initials{font-size:145px}.photo-foot{font-size:9px}.hero-content{padding-top:0}h1{font-size:clamp(65px,14vw,92px);margin-top:12px}.intro{font-size:16px}.info-content h3{font-size:20px}.work{padding:76px 0}.work-head{display:block;margin-bottom:31px}.work-head h2{font-size:clamp(49px,11vw,72px);margin-bottom:18px}.work-head p{font-size:14px}.projects{grid-template-columns:1fr;gap:21px}.project.featured{display:block;grid-column:auto}.art,.featured .art{min-height:280px}.featured .project-body,.project-body{padding:30px 27px 31px}.project-body h3{font-size:32px}.kicker{margin-bottom:21px}.outro{margin-top:50px}.footer-inner{min-height:138px}.footer-inner>div{display:block}.footer-mark{display:block;margin-bottom:7px}.footer-text{display:block;font-size:12px}}
+    @media(max-width:400px){.portrait-frame{aspect-ratio:.83}h1{font-size:61px}.info-content h3{font-size:17px}.info-content p{font-size:13px}.footer-inner a{white-space:nowrap}.footer-base{font-size:9px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{animation:none}.js .reveal{opacity:1;transform:none;transition:none}.project,.text-link,.nav-cta{transition:none}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="Will Cast — back to top"><span class="mark">W<span>.</span></span>WILL CAST</a>
+      <nav class="links" aria-label="Main navigation"><a href="#work">Projects</a><a href="#education">Education</a><a href="#experience">Experience</a></nav>
+      <a class="nav-cta" href="#work">Explore work <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section id="top" class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-top fade"><span class="eyebrow"><span class="dot" aria-hidden="true"></span>Engineering portfolio</span><span class="eyebrow right">Design · Build · Refine</span></div>
+      <div class="hero-grid">
+        <div class="fade delay1">
+          <figure class="portrait-frame">
+            <div class="placeholder" aria-hidden="true"><span class="orbit one"></span><span class="orbit two"></span><span class="initials">WC<span>.</span></span><span class="placeholder-note">YOUR PHOTO GOES HERE</span></div>
+            <img id="portrait" src="assets/portrait.jpg" alt="Portrait of Will Cast" onerror="this.style.display='none'">
+            <figcaption class="portrait-caption"><span>CURIOUS BY DESIGN.</span><span aria-hidden="true">＋</span></figcaption>
+          </figure>
+          <div class="photo-foot"><span>01 / THE PERSON BEHIND THE PROJECTS</span><span aria-hidden="true">✳</span></div>
+        </div>
+        <div class="hero-content fade delay2">
+          <div><span class="eyebrow hello">Hello, I'm</span><h1 id="hero-title">Will Cast<span class="accent">.</span></h1>
+            <p class="role">Engineer. Designer. Builder.</p>
+            <p class="intro">I turn ideas into things you can hold, test, and use. I'm studying engineering at Dartmouth, with a focus on hardware, controls, and thoughtful product design.</p>
+          </div>
+          <div id="education" class="info"><div class="info-heading"><span>01</span><h2>Education</h2></div>
+            <div class="info-content"><div><h3>Dartmouth College <span class="lighter">/ Thayer School</span></h3><p>Mechanical Engineering · B.E. pathway</p><p>Electrical &amp; Computer Engineering · M.Eng. pathway</p></div><span class="arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <div id="experience" class="info"><div class="info-heading"><span>02</span><h2>Experience</h2></div>
+            <div class="info-content"><div><h3>Amazon LEO</h3><p>Satellite hardware · Engineering internship</p><p class="detail">RF test fixture design, fabrication, and validation</p></div><span class="arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <a class="text-link" href="#work">Discover my work <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="work-head reveal"><div><span class="eyebrow">A selection of things I've worked on</span><h2 id="work-title">Selected <span>work.</span></h2></div><p>From satellite hardware to experimental systems, I like solving problems all the way through the details.</p></div>
+        <div class="projects">
+          <article class="project featured reveal">
+            <div class="art circuit" role="img" aria-label="Stylized illustration of RF test hardware"><span class="art-index">01 / HARDWARE</span><div class="ring"></div><div class="ring two"></div><div class="board"><div class="chip">RF</div><div class="chip small"></div><div class="trace a"></div><div class="trace b"></div><div class="trace c"></div><div class="trace d"></div></div></div>
+            <div class="project-body"><div class="kicker"><span>Internship</span><span>Amazon LEO</span></div><h3>Testing what goes into orbit.</h3><p>Designed, fabricated, and validated test hardware supporting satellite RF development.</p><span class="tag">Hardware Development</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="art lunar" role="img" aria-label="Concept illustration of paired tile tracks on the Moon"><span class="art-index">02 / SYSTEMS</span><div class="sun"></div><div class="horizon"></div><div class="track left"><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i></div><div class="track right"><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i><i class="tile"></i></div></div>
+            <div class="project-body"><div class="kicker"><span>Academic project</span><span>Design research</span></div><h3>Building paths beyond Earth.</h3><p>Exploring materials, geometry, and manufacturing methods for lunar mobility infrastructure.</p><span class="tag">Systems Engineering</span></div>
+          </article>
+          <article class="project reveal">
+            <div class="art stars" role="img" aria-label="Illustration of stars projected into a room"><span class="art-index">03 / INTERACTIVE</span><div class="starfield"></div><div class="beam"></div><div class="projector"><span class="lens"></span></div><span class="spark one">✦</span><span class="spark two">✧</span></div>
+            <div class="project-body"><div class="kicker"><span>Personal project</span><span>In progress</span></div><h3>Making a room feel like space.</h3><p>A Raspberry Pi-powered projection experience with physical controls for switching scenes.</p><span class="tag">Prototyping &amp; Software</span></div>
+          </article>
+        </div>
+        <div class="outro reveal"><span aria-hidden="true">✳</span><p>Good engineering is equal parts curiosity, precision, and the willingness to make another prototype.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="shell">
+    <div class="footer-inner"><div><span class="footer-mark">WC.</span><span class="footer-text">Built thoughtfully, one iteration at a time.</span></div><a href="#top">Back to top ↑</a></div>
+    <div class="footer-base"><span>© <span id="year">2026</span> WILL CAST</span><span>ENGINEERING × DESIGN</span></div>
+  </footer>
+  <script>
+    document.documentElement.classList.add('js');
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, o) => entries.forEach(e => {if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}}), {threshold:0.10,rootMargin:'0px 0px -35px 0px'});
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
