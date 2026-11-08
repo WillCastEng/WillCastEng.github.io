@@ -8,14 +8,42 @@
   <title>Will Cast — Engineering & Design</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23202426'/%3E%3Ctext x='15' y='44' font-family='Arial' font-weight='bold' font-size='38' fill='white'%3EW%3C/text%3E%3Ccircle cx='50' cy='43' r='4' fill='%23de704e'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
 </head>
 <body>
   <a href="#main" class="skip">Skip to content</a>
   <header class="header">
     <div class="shell nav">
-      <a class="brand" href="#top" aria-label="Will Cast — back to top"><span class="mark">W<span>.</span></span>WILL CAST</a>
-      <nav class="links" aria-label="Main navigation"><a href="#work">Projects</a><a href="#education">Education</a><a href="experience.html">Experience</a></nav>
-      <a class="nav-cta" href="#work">Explore work <span aria-hidden="true">↗</span></a>
+      <a class="brand" href="#top" aria-label="Will Cast — back to top"><span class="mark">W<span>.</span></span><span class="brand-name">WILL CAST</span></a>
+      <nav class="links section-nav" aria-label="Main navigation">
+        <a class="nav-home" href="index.html" aria-current="page">Home</a>
+        <div class="nav-item"><a class="nav-tab-link" href="projects.html">Projects</a><button class="nav-trigger" type="button" aria-label="Toggle Projects sections" aria-expanded="false" aria-controls="nav-projects"><svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="m1 1 3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          <div class="nav-panel" id="nav-projects" hidden><a class="nav-overview" href="projects.html">All projects</a><span class="nav-panel-divider" aria-hidden="true"></span>
+            <a href="projects.html#rf-test-hardware">RF test hardware</a>
+            <a href="projects.html#lunar-roadway">Lunar roadway</a>
+            <a href="projects.html#dune-buggy">Dune buggy</a>
+          </div>
+        </div>
+        <div class="nav-item"><a class="nav-tab-link" href="education.html">Education</a><button class="nav-trigger" type="button" aria-label="Toggle Education sections" aria-expanded="false" aria-controls="nav-education"><svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="m1 1 3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          <div class="nav-panel" id="nav-education" hidden><a class="nav-overview" href="education.html">Education overview</a><span class="nav-panel-divider" aria-hidden="true"></span>
+            <a href="education.html#masters">Master’s</a>
+            <a href="education.html#undergraduate">Undergraduate</a>
+            <a href="education.html#tuck-bridge">Tuck School of Business</a>
+            <a href="education.html#high-school">High School</a>
+          </div>
+        </div>
+        <div class="nav-item"><a class="nav-tab-link" href="experience.html">Experience</a><button class="nav-trigger" type="button" aria-label="Toggle Experience sections" aria-expanded="false" aria-controls="nav-experience"><svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="m1 1 3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+          <div class="nav-panel" id="nav-experience" hidden><a class="nav-overview" href="experience.html">All experience</a><span class="nav-panel-divider" aria-hidden="true"></span>
+            <a href="experience.html#amazon-leo">Amazon LEO</a>
+            <a href="experience.html#blue-origin">Blue Origin</a>
+            <a href="experience.html#dali-lab">DALI Lab</a>
+            <a href="experience.html#tuck-lab">Tuck Lab</a>
+            <a href="experience.html#dfr">DFR</a>
+            <a href="experience.html#thayer-school">Thayer School</a>
+            <a href="experience.html#garage-workshop">Garage Workshop</a>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
   <main id="main">
@@ -34,12 +62,12 @@
             <p class="role">Engineer. Designer. Builder.</p>
             <p class="intro">I turn ideas into things you can hold, test, and use. I'm studying engineering at Dartmouth, with a focus on hardware, controls, and product design.</p>
           </div>
-          <div id="education" class="info"><div class="info-heading"><span>01</span><h2>Education</h2></div>
+          <a id="education" class="info info-link" href="education.html#undergraduate" aria-label="View Dartmouth College education"><div class="info-heading"><span>01</span><h2>Education</h2></div>
             <div class="info-content"><div class="education-details"><h3>Dartmouth College <span class="lighter">/ Thayer School</span></h3><div class="education-degrees"><p><span>Mechanical Engineering · B.E.</span><span class="graduation-date">(exp. Spring 2027)</span></p><p><span>Electrical &amp; Computer Engineering · M.Eng.</span><span class="graduation-date">(exp. Spring 2028)</span></p></div></div><span class="arrow" aria-hidden="true">↗</span></div>
-          </div>
-          <div id="experience" class="info"><div class="info-heading"><span>02</span><h2>Experience</h2></div>
+          </a>
+          <a id="experience" class="info info-link" href="experience.html#amazon-leo" aria-label="View Amazon LEO experience"><div class="info-heading"><span>02</span><h2>Experience</h2></div>
             <div class="info-content"><div><h3>Amazon LEO</h3><p>Satellite hardware · Engineering internship</p><p class="detail">RF test fixture design, fabrication, and validation</p></div><span class="arrow" aria-hidden="true">↗</span></div>
-          </div>
+          </a>
           <a class="text-link" href="#work">Discover my work <span aria-hidden="true">↘</span></a>
         </div>
       </div>
