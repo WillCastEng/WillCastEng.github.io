@@ -20,6 +20,14 @@ function paint() {
     card.style.setProperty('--card-depth', progress.toFixed(4));
     if (card.getBoundingClientRect().top <= inset + innerHeight * .25) active = index;
   });
+  cards.forEach((card, index) => {
+    // Keep each card's space in the deck, but clear earlier cards from view
+    // once the next chapter is primary. Reverse scrolling restores them.
+    const covered = deck.classList.contains('deck-ready') && index < active;
+    card.classList.toggle('card-covered', covered);
+    card.inert = covered;
+  });
+  document.body.classList.toggle('garage-active', cards[active].id === 'garage-workshop');
   links.forEach((link, index) => {
     if (index === active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
