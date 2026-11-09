@@ -19,9 +19,9 @@
         <a class="nav-home" href="index.html">Home</a>
         <div class="nav-item"><a class="nav-tab-link" href="projects.html">Projects</a><button class="nav-trigger" type="button" aria-label="Toggle Projects sections" aria-expanded="false" aria-controls="nav-projects"><svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="m1 1 3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
           <div class="nav-panel" id="nav-projects" hidden><a class="nav-overview" href="projects.html">All projects</a><span class="nav-panel-divider" aria-hidden="true"></span>
-            <a href="projects.html#rf-test-hardware">RF test hardware</a>
-            <a href="projects.html#lunar-roadway">Lunar roadway</a>
             <a href="projects.html#dune-buggy">Dune buggy</a>
+            <a href="projects.html#project-02">Project 02</a>
+            <a href="projects.html#project-03">Project 03</a>
           </div>
         </div>
         <div class="nav-item"><a class="nav-tab-link" href="education.html" aria-current="page">Education</a><button class="nav-trigger" type="button" aria-label="Toggle Education sections" aria-expanded="false" aria-controls="nav-education"><svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="m1 1 3.5 3.5L8 1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
@@ -87,11 +87,42 @@
                 <figure><img src="Assets/nitinol-sem-results.png" alt="SEM images comparing nitinol material compositions and sintering times" width="1244" height="1080" loading="lazy" decoding="async" style="object-fit:contain"><figcaption>SEM material composition results</figcaption></figure>
               </div>
             </li>
-            <li class="project-course-row" id="engs-26"><span class="project-course-code">ENGS 26</span><h4>Control Theory</h4></li>
-            <li class="project-course-row" id="engs-33"><span class="project-course-code">ENGS 33</span><h4>Solid Mechanics</h4></li>
-            <li class="project-course-row" id="engs-76"><span class="project-course-code">ENGS 76</span><h4>Machine Engineering</h4></li>
-            <li class="project-course-row" id="engs-89-90"><span class="project-course-code">ENGS 89/90</span><h4>Engineering Design Methodology (Capstone)</h4></li>
-            <li class="project-course-row" id="engs-93"><span class="project-course-code">ENGS 93</span><h4>Statistical Methods in Engineering</h4></li>
+            <li class="project-course-row project-course-row-feature" id="engs-26">
+              <span class="project-course-code">ENGS 26</span>
+              <div class="project-course-description"><h4>Control Theory</h4><p>Calculating and building a circuit to keep the pendulum balanced vertically.</p></div>
+              <div class="project-course-gallery">
+                <figure><img src="Assets/control-theory-pendulum-car.jpeg" alt="Pendulum car prototype with a breadboard control circuit" width="2048" height="1536" loading="lazy" decoding="async"><figcaption>Pendulum car (in progress)</figcaption></figure>
+                <p class="project-course-progress">Currently taking class, more to come</p>
+              </div>
+            </li>
+            <li class="project-course-row project-course-row-feature" id="engs-33">
+              <span class="project-course-code">ENGS 33</span>
+              <div class="project-course-description"><h4>Solid Mechanics</h4><p>Designed, hand calculated, modeled, simulated, built, and finally tested a bridge design.</p></div>
+              <div class="project-course-gallery">
+                <figure><img src="Assets/solid-mechanics-bridge-simulation.png" alt="Bridge design simulation showing structural analysis results" width="750" height="284" loading="lazy" decoding="async" style="object-fit:contain"><figcaption>Simulating bridge</figcaption></figure>
+                <figure><img src="Assets/solid-mechanics-bridge-instron.png" alt="Wooden bridge undergoing load testing in an Instron machine" width="592" height="570" loading="lazy" decoding="async"><figcaption>Testing in Instron</figcaption></figure>
+              </div>
+            </li>
+            <li class="project-course-row project-course-row-feature" id="engs-76">
+              <span class="project-course-code">ENGS 76</span>
+              <div class="project-course-description"><h4>Machine Engineering</h4><p>Designed and built the only robot in the class capable of completing all competition tasks.</p></div>
+              <div class="project-course-gallery">
+                <figure><img src="Assets/engs-76-robot-design.png" alt="CAD design of the competition robot" width="828" height="1008" loading="lazy" decoding="async" style="object-fit:contain"><figcaption>The design</figcaption></figure>
+                <figure><video src="Assets/engs-76-robot-testing.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="Competition robot testing its capabilities"></video><figcaption>Testing capabilities</figcaption></figure>
+              </div>
+            </li>
+            <li class="project-course-row project-course-row-feature" id="engs-89-90">
+              <span class="project-course-code">ENGS 89/90</span>
+              <div class="project-course-description"><h4>Engineering Design Methodology (Capstone)</h4><p>Working on a team of 17 to design efficient lunar roadways, minimizing materials transported from Earth and maximizing the use of resources available on the Moon.</p></div>
+              <div class="project-course-gallery project-course-gallery-wide">
+                <figure><a href="https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/the-nasa-rasc-al-2026-competition/" target="_blank" rel="noopener" aria-label="Learn about NASA's RASC-AL 2026 competition (opens in a new tab)"><img src="Assets/engs-capstone-rasc-al.png" alt="NASA RASC-AL competition" width="814" height="236" loading="lazy" decoding="async"></a><figcaption>Currently taking class, more to come <a class="course-challenge-link" href="https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/the-nasa-rasc-al-2026-competition/" target="_blank" rel="noopener">(Link to challenge) <span aria-hidden="true">↗</span></a></figcaption></figure>
+              </div>
+            </li>
+            <li class="project-course-row project-course-row-feature" id="engs-93">
+              <span class="project-course-code">ENGS 93</span>
+              <div class="project-course-description"><h4>Statistical Methods in Engineering</h4><p>Created a complete statistical report on motorcycle safety and perception.</p></div>
+              <div class="project-course-description"><a class="text-link" href="Assets/engs-93-motorcycle-risk-report.pdf" target="_blank" rel="noopener">Read the report <span aria-hidden="true">↗</span></a><p>A Statistical Investigation of Motorcycle Risks and Public Perception</p></div>
+            </li>
           </ul>
         </section>
       </section>
@@ -99,13 +130,12 @@
         <p class="eyebrow">03 / Tuck School of Business</p>
         <div class="academic-heading">
           <div><h2 id="tuck-title">Business Bridge<br>Program</h2><p class="experience-subtitle">Hanover, NH · Nov – Dec 2025</p></div>
-          <div class="tuck-identity"><img src="Assets/tuck-school-logo.png" alt="Tuck School of Business at Dartmouth" width="768" height="215" loading="lazy" decoding="async"><span class="tag">Program graduate</span></div>
+          <div class="tuck-identity school-about-identity"><img src="Assets/tuck-school-logo.png" alt="Tuck School of Business at Dartmouth" width="768" height="215" loading="lazy" decoding="async"><a class="text-link" href="https://bridge.tuck.dartmouth.edu/program" target="_blank" rel="noopener noreferrer">About Tuck Bridge <span aria-hidden="true">↗</span></a></div>
         </div>
         <p class="business-summary">Completed an intensive business certificate taught by Tuck MBA faculty, covering leadership, finance, accounting, marketing, and strategy through coursework and a team company-valuation capstone.</p>
-        <a class="text-link tuck-program-link" href="https://bridge.tuck.dartmouth.edu/program" target="_blank" rel="noopener noreferrer">About Tuck Bridge <span aria-hidden="true">↗</span></a>
       </section>
       <section class="academic-card high-school-card" id="high-school" aria-labelledby="high-school-title">
-        <div class="academic-heading"><div><p class="eyebrow">04 / High School</p><h2 id="high-school-title">University Preperatory Academy</h2><p class="experience-subtitle">Seattle, WA · Sep 2019 – Jun 2023</p></div><div class="academic-identity"><img src="Assets/uprep-logo.png" alt="University Prep logo" loading="lazy" decoding="async"><span class="tag">High School Diploma</span></div></div>
+        <div class="academic-heading"><div><p class="eyebrow">04 / High School</p><h2 id="high-school-title">University Preperatory Academy</h2><p class="experience-subtitle">Seattle, WA · Sep 2019 – Jun 2023</p></div><div class="academic-identity school-about-identity"><img src="Assets/uprep-logo.png" alt="University Prep logo" loading="lazy" decoding="async"><a class="text-link" href="https://www.universityprep.org/" target="_blank" rel="noopener noreferrer">About UPrep <span aria-hidden="true">↗</span></a></div></div>
         <p class="business-summary">Founded the Engineering Club, co-led the Computer Engineering Club, and served as VEX Robotics Captain and Varsity Tennis Captain.</p>
         <ul class="course-list school-activities" aria-label="High school leadership"><li>Engineering Club Founder</li><li>Computer Engineering Club Co-Head</li><li>VEX Robotics Captain</li><li>Varsity Tennis Captain</li></ul>
       </section>
